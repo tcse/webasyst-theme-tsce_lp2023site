@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{strip}
+{$_color_scheme_class = 'color_'|cat:str_replace('img/themebuttons/','',str_replace('.png','',$theme_settings.buttons_color_scheme))}
+
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{$wa->title()|escape}</title>
+  <meta name="description" content="{$wa->meta('description')|escape}" />
+  <meta name="keywords" content="{$wa->meta('keywords')|escape}" />
+  <meta name="author" content="">
+  {* CSS *}
+  <link rel="shortcut icon" href="{$wa_static_url}favicon.ico" />
+  {* <link href="{$wa_theme_url}assets/bootstrap/513/css/bootstrap.css" rel="stylesheet"> *}
+  <link href="{$wa_theme_url}assets/bootstrap/513/css/styles.css?001" rel="stylesheet">
+  <link href="{$wa_theme_url}assets/fonts/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" >
+  <link rel="stylesheet" href="{$wa_theme_url}css/user.css?001">
+  {* Google Fonts *}
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body  id="page-top" class="">
+<style>
+  {if $theme_settings.button_round === 'light-round'}
+    .rounded-full {
+        border-radius: 0.25rem;
+    }
+  {elseif $theme_settings.button_round === 'none-round'}
+    .rounded-full {
+        border-radius: 0;
+    }
+  {/if}
+
+  {if $theme_settings.custom_colors === '1'}
+  .gradient {
+      background: linear-gradient(90deg, {$theme_settings.first_color} 0%, {$theme_settings.second_color} 100%);
+  }
+  {else}
+    {if $_color_scheme_class === "color_blue"}
+    .gradient {
+        background: linear-gradient(90deg, #4299E1 0%, #2A4365 100%);
+    }
+    {elseif $_color_scheme_class === "color_gray"}
+    .gradient {
+        background: linear-gradient(90deg, #A0AEC0 0%, #1A202C 100%);
+    }
+    {elseif $_color_scheme_class === "color_green"}
+    .gradient {
+        background: linear-gradient(90deg, #48BB78 0%, #22543D 100%);
+    }
+    {elseif $_color_scheme_class === "color_indigo"}
+    .gradient {
+        background: linear-gradient(90deg, #667EEA 0%, #3C366B 100%);
+    }
+    {elseif $_color_scheme_class === "color_orange"}
+    .gradient {
+        background: linear-gradient(90deg, #ED8936 0%, #7B341E 100%);
+    }
+    {elseif $_color_scheme_class === "color_pink"}
+    .gradient {
+        background: linear-gradient(90deg, #ED64A6 0%, #702459 100%);
+    }
+    {elseif $_color_scheme_class === "color_purple"}
+    .gradient {
+        background: linear-gradient(90deg, #9F7AEA 0%, #44337A 100%);
+    }
+    {elseif $_color_scheme_class === "color_red"}
+    .gradient {
+        background: linear-gradient(90deg, #F56565 0%, #742A2A 100%);
+    }
+    {elseif $_color_scheme_class === "color_teal"}
+    .gradient {
+        background: linear-gradient(90deg, #38B2AC 0%, #234E52 100%);
+    }
+    {elseif $_color_scheme_class === "color_yellow"}
+    .gradient {
+        background: linear-gradient(90deg, #ECC94B 0%, #744210 100%);
+    }
+    {/if}
+  {/if}
+</style>
+    {* Навигация *}
+    {include file="`$wa_active_theme_path`/navigation.html"}
+    {* Контент *}
+    {include file="`$wa_active_theme_path`/main.html" inline}
+    {* Подвал *}
+    {include file="`$wa_active_theme_path`/footer.html"}
+    
+
+
+    {* JS *}
+    <script src="{$wa_theme_url}assets/bootstrap/513/js/bootstrap.bundle.min.js"></script>
+    <script src="{$wa_theme_url}assets/bootstrap/513/js/scripts.js"></script>
+    <script src="{$wa_theme_url}js/user.js"></script>
+</body>
+</html>
+{/strip}

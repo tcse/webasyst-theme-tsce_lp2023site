@@ -1,0 +1,7 @@
+
+.img-brand {
+    filter: grayscale(1);
+}
+.img-brand:hover {
+    filter: grayscale(0);
+}

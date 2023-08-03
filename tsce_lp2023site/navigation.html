@@ -1,0 +1,77 @@
+{strip}
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"style="background-color: {$theme_settings.navbar_bg_color};">
+    <div class="container">
+
+        {if $theme_settings.logo_format === "logo_format_img"}
+            <a class="navbar-brand" href="{$wa_app_url}">
+                <img src="{$wa_theme_url}{$theme_settings.logo}?v{$wa_theme_version}" alt="{$wa->accountName()}" />
+            </a>
+            {elseif $theme_settings.logo_format === "logo_format_text"}
+            <a  class="navbar-brand" href="{$wa_app_url}">{$theme_settings.logo_text}</a>
+            {else}
+            <a  class="navbar-brand" href="{$wa_app_url}">
+                <img src="{$wa_theme_url}{$theme_settings.logo}?v{$wa_theme_version}" alt="{$wa->accountName()}" class="me-3" /> 
+                {$theme_settings.logo_text}
+            </a>
+        {/if}
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+
+        <div class="collapse  navbar-collapse" id="navbarResponsive">
+
+            {* Произвольный набор ссылок из админки *}
+            {if $theme_settings.mainmenu_links === "custom_menu"}
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    {$theme_settings.mainmenu_links_custom}
+                    <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>-->
+                </ul>
+                {* Страницы приложения САЙТ *}
+                {elseif $theme_settings.mainmenu_links === "site_pages"}
+                    {$items = $wa->site->pages()}
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        {foreach $items as $item}
+                            <li class="nav-item"><a class="nav-link" href="{$item.url}">{$item.name}</a></li>
+                        {/foreach}
+                    </ul>
+                {* Страницы приложения БЛОГ *}
+                {elseif $theme_settings.mainmenu_links === "blog_pages"}
+                    {$items = $wa->blog->pages()}
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        {foreach $items as $item}
+                            <li class="nav-item"><a class="nav-link" href="{$item.url}">{$item.name}</a></li>
+                        {/foreach}
+                    </ul>
+                {* Последние публикации из приложения БЛОГ *}
+                {elseif $theme_settings.mainmenu_links === "blog_posts"}
+                    {$latest_posts = $wa->blog->posts(null, 5)}
+                    <ul class="site-menu main-menu js-clone-nav d-none d-lg-none">
+                          {foreach $latest_posts as $post}
+                          <li>
+                              <a href="{$post.link}" class="nav-link">{$post.title}</a>
+                          </li>
+                          {/foreach}
+                    </ul>
+                {* Стандартное меню приложения «Сайт» &gt; Настройки &gt; $wa-&gt;apps()Г *}
+                {elseif $theme_settings.mainmenu_links === "standart_menu"}
+                {if $wa->apps()}
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        {foreach $wa->apps() as $a}
+                            <li class="nav-item {if $a.url==$wa_app_url && !$wa->globals('isMyAccount')}is-active{/if}">
+                                <a href="{$a.url}" class="nav-link">{$a.name}</a>
+                            </li>
+                        {/foreach}
+                    </ul>
+                {/if}
+
+            {/if}
+
+
+
+        </div>
+    </div>
+</nav>
+
+{/strip}
