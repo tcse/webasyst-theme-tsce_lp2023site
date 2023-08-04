@@ -31,7 +31,7 @@
     <file path="footer.html">
       <description locale="ru_RU">Footer</description>
     </file>
-    <file path="index.html" custom="0" modified="1">
+    <file path="index.html">
       <description locale="ru_RU"/>
     </file>
     <file path="error.html">
@@ -105,7 +105,7 @@
       <name locale="en_US">Header links</name>
       <description locale="ru_RU">Если известно, что состав главного меню формируется с помощью конструкции $wa-&gt;apps(), то можно указать фиксированный набор ссылок меню с нужными адресами (URL) в настройках приложения «Сайт». Для этого переключите настройку $wa-&gt;apps меню на вариант «Настроить» и измените набор ссылок в главном меню, как вам нужно.&lt;br&gt;
                 &lt;p&gt;
-                &lt;img src="/wa-data/public/site/themes/accent/images/helpers/helper-menu.png" alt="Image" class="img-fluid"&gt;
+                &lt;img src="https://webasyst.tcse-cms.com/wa-data/public/site/themes/accent/images/helpers/helper-menu.png" alt="Image" class="img-fluid"&gt;
                 &lt;/p&gt;
                 Подробнее можно прочитать на странице &lt;a href="https://support.webasyst.ru/6921/edit-main-menu/" target="_blank"&gt;https://support.webasyst.ru/6921/edit-main-menu/&lt;/a&gt;
                 </description>
