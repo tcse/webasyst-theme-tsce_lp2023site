@@ -2,7 +2,14 @@
 
 В основе бесплатный HTML шаблон с сайта https://startbootstrap.com/theme/agency
 Наша студия интегрировала верстку данного макета в движок webasyst
+
 Репозиторий https://github.com/tcse/webasyst-theme-tsce_lp2023site
+
+Демо-версия темы дизайна находится по адресу https://webasyst.tcse-cms.com/agency/ 
+
+Официальная страница темы дизайна на сайте разработчика https://tcse-cms.com/works/webasyst-app/2070-tcse-lending-2023-tema-dizajna-dlja-prilozhenija-sajt-webasyst.html 
+
+Страница темы дизайна в магазине приложений Webasyst https://www.webasyst.ru/store/theme/tsce_lp2023site/ 
 
 Разработка темы дизайна для CMS - это сложный и трудоемкий процесс, который требует множества усилий и времени от разработчика. Однако, несмотря на это, многие разработчики предлагают свои темы бесплатно.
 
