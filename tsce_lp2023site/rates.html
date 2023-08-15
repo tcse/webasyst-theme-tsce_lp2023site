@@ -1,5 +1,6 @@
 {strip}
 
+{if $theme_settings.about_block__io === "1"}
 <!-- About-->
 <section class="page-section" id="about">
     <div class="container">
@@ -62,7 +63,9 @@
         </ul>
     </div>
 </section>
+{/if}
 
+{if $theme_settings.team_block__io === "1"}
 <!-- Team-->
 <section class="page-section bg-light" id="team">
     <div class="container">
@@ -107,8 +110,9 @@
         </div>
     </div>
 </section>
+{/if}
 
-
+{if $theme_settings.logoclients_block__io === "1"}
 <!-- Clients-->
 <div class="py-5">
     <div class="container">
@@ -128,4 +132,5 @@
         </div>
     </div>
 </div>
+{/if}
 {/strip}

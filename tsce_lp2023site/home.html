@@ -4,11 +4,17 @@
         {include file="main-block.html"}
     {/if}
     {* Преимущества *}
-    {include file="features.html"}
+    {if $theme_settings.features_block__io === "1"}
+        {include file="features.html"}
+    {/if}
     {* Отзывы *}
-    {include file="reviews.html"}
-    {* Тарифы *}
-    {include file="rates.html"}
+    {if $theme_settings.portfolio_block__io === "1"}
+        {include file="reviews.html"}
+     {/if}
+    {* О нас, наша команда, наши клиенты *}
+        {include file="rates.html"}
     {* Предложения *}
-    {include file="offer.html"}
+    {if $theme_settings.offer_block__io === "1"}
+        {include file="offer.html"}
+    {/if}
 {/strip}

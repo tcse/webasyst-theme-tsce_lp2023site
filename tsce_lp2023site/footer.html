@@ -1,21 +1,27 @@
 {strip}
 
-<!-- Footer-->
-<footer class="footer py-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-start">{$theme_settings.logo_text}</div>
-            <div class="col-lg-4 my-3 my-lg-0">
-                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="vkontakte"><i class="fab fa-vk"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="instagram"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="telegram"><i class="fab fa-telegram"></i></a>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-                <a class="link-dark text-decoration-none me-3" href="http://www.shop-script.ru/">Создание интернет-магазина — Shop-Script</a>
-                <a class="link-dark text-decoration-none" href="http://tcse-cms.com">Разработано — веб-студией TCSE </a>
+{if $theme_settings.footer2__io === "1"}
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">{$theme_settings.logo_text}</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    {if !empty($theme_settings.footer__socicon_vk)}<a class="btn btn-dark btn-social mx-2" href="{$theme_settings.footer__socicon_vk}" aria-label="vkontakte"><i class="fab fa-vk"></i></a>{/if}
+                    {if !empty($theme_settings.footer__socicon_instagram)}<a class="btn btn-dark btn-social mx-2" href="{$theme_settings.footer__socicon_instagram}" aria-label="instagram"><i class="fab fa-instagram"></i></a>{/if}
+                    {if !empty($theme_settings.footer__socicon_tg)}<a class="btn btn-dark btn-social mx-2" href="{$theme_settings.footer__socicon_tg}" aria-label="telegram"><i class="fab fa-telegram"></i></a>{/if}
+
+                    {if !empty($theme_settings.footer__socicon_email)}<a class="btn btn-dark btn-social mx-2" href="mailto:{$theme_settings.footer__socicon_email}" aria-label="telegram"><i class="fa fa-envelope"></i></a>{/if}
+
+                    {if !empty($theme_settings.footer__socicon_rss)}<a class="btn btn-dark btn-social mx-2" href="{$theme_settings.footer__socicon_rss}" aria-label="telegram"><i class="fa fa-rss"></i></a>{/if}
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none" href="https://tcse-cms.com">Разработано — веб-студией TCSE </a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+{/if}
+
 
 {/strip}

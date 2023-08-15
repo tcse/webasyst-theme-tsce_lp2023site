@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
-<theme id="tsce_lp2023site" app="site" vendor="942063" author="TCSE" version="1.0.4" edition="8">
+<theme id="tsce_lp2023site" app="site" vendor="942063" author="TCSE" version="1.0.5">
   <name locale="ru_RU">TCSE Лендинг 2023</name>
   <name locale="en_US">TCSE Landing Page 2023</name>
   <instruction locale="en_US">https://webasyst.tcse-cms.com/promo/</instruction>
@@ -32,7 +32,7 @@
       <description locale="ru_RU">Footer</description>
     </file>
     <file path="index.html">
-      <description locale="ru_RU"/>
+      <description locale="ru_RU"><![CDATA[]]></description>
     </file>
     <file path="error.html">
       <description locale="ru_RU">Error</description>
@@ -105,7 +105,7 @@
       <name locale="en_US">Header links</name>
       <description locale="ru_RU">Если известно, что состав главного меню формируется с помощью конструкции $wa-&gt;apps(), то можно указать фиксированный набор ссылок меню с нужными адресами (URL) в настройках приложения «Сайт». Для этого переключите настройку $wa-&gt;apps меню на вариант «Настроить» и измените набор ссылок в главном меню, как вам нужно.&lt;br&gt;
                 &lt;p&gt;
-                &lt;img src="https://webasyst.tcse-cms.com/wa-data/public/site/themes/accent/images/helpers/helper-menu.png" alt="Image" class="img-fluid"&gt;
+                &lt;img src="https://online.tcse-cms.com/doc/webasyst/themes/tsce_lp2023site/helper-menu.png" alt="Image" class="img-fluid"&gt;
                 &lt;/p&gt;
                 Подробнее можно прочитать на странице &lt;a href="https://support.webasyst.ru/6921/edit-main-menu/" target="_blank"&gt;https://support.webasyst.ru/6921/edit-main-menu/&lt;/a&gt;
                 </description>
@@ -134,12 +134,12 @@
       </options>
     </setting>
     <setting var="mainmenu_links_custom" control_type="text">
-      <value><![CDATA[<li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
-<li class="nav-item"><a class="nav-link" href="#portfolio">Портфолио</a></li>
-<li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
-<li class="nav-item"><a class="nav-link" href="#team">Команда</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
-            ]]></value>
+      <value>&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#services"&gt;Услуги&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#portfolio"&gt;Портфолио&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#about"&gt;О нас&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#team"&gt;Команда&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#contact"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+            </value>
       <name locale="ru_RU">HTML код произвольных ссылок</name>
       <description locale="ru_RU">Если на предыдущем шаге выбран пункт «HTML код произвольных ссылок», то в данном блоке необходимо указать свои ссылки путем редактирования и замены текста, где вместо символа решетки # указать адрес необходимой страницы.</description>
     </setting>
@@ -160,7 +160,7 @@
       <description locale="ru_RU">Если выключить - вся секция целиком будет удалена из шаблона</description>
     </setting>
     <setting var="bg_masthead" control_type="image">
-      <value>img/bg_masthead.jpeg?v1689794083</value>
+      <value>img/bg_masthead.jpg?v1691084874</value>
       <filename>img/bg_masthead.*</filename>
       <name locale="en_US">bg_masthead</name>
       <name locale="ru_RU">Фоновая картинка секции</name>
@@ -188,6 +188,11 @@
       <name locale="ru_RU">
                 Секция: Услуги
             </name>
+    </setting>
+    <setting control_type="checkbox" var="features_block__io">
+      <value>1</value>
+      <name locale="ru_RU">Включить отображение секции</name>
+      <description locale="ru_RU">Если выключить - вся секция целиком будет удалена из шаблона</description>
     </setting>
     <setting var="features__values" control_type="paragraph">
       <value/>
@@ -222,7 +227,7 @@
       <name locale="ru_RU">Заголовок №3</name>
     </setting>
     <setting var="features__p_3" control_type="text">
-      <value><![CDATA[                                Регистрация домена и хостинга при их отсуствии
+      <value>                                Регистрация домена и хостинга при их отсуствии
  Покупка всех лицензий с привязкой передачей на вашу учетную запись
  Установка фреймворка на хостинг заказчика
  Установка и настройка приложений Shop-Script, Блог, Сайт, Фото
@@ -231,7 +236,7 @@
  Установка онлайн-консультанта при необходимости
             
             
-            ]]></value>
+            </value>
       <name locale="ru_RU">Описание №3</name>
     </setting>
     <!-- Портфолио блок -->
@@ -240,6 +245,11 @@
       <name locale="ru_RU">
                 Секция: Портфолио
             </name>
+    </setting>
+    <setting control_type="checkbox" var="portfolio_block__io">
+      <value>1</value>
+      <name locale="ru_RU">Включить отображение секции</name>
+      <description locale="ru_RU">Если выключить - вся секция целиком будет удалена из шаблона</description>
     </setting>
     <setting var="portfolio__h1_title" control_type="text">
       <value>Портфолио</value>
@@ -311,6 +321,11 @@
                 Секция: О нас
             </name>
     </setting>
+    <setting control_type="checkbox" var="about_block__io">
+      <value>1</value>
+      <name locale="ru_RU">Включить отображение секции</name>
+      <description locale="ru_RU">Если выключить - вся секция целиком будет удалена из шаблона</description>
+    </setting>
     <setting var="about__h1_title" control_type="text">
       <value>О НАС</value>
       <name locale="ru_RU">Заголовок блока ABOUT</name>
@@ -337,12 +352,12 @@
       <name locale="ru_RU">Заголовок под датой №1</name>
     </setting>
     <setting var="about__timeline_body_1" control_type="text">
-      <value><![CDATA[                Доработки тем дизайна и интеграция плагинов (Front-end)
+      <value>                Доработки тем дизайна и интеграция плагинов (Front-end)
                 Разработка и доработка плагинов (Back-end)
                 Настройка функционала плагинов или тем дизайна
                 Разработка ТЗ, прототипирование, дизайн
             
-            ]]></value>
+            </value>
       <name locale="ru_RU">Описание №1</name>
     </setting>
     <setting var="about__timeline_image_2" control_type="image">
@@ -359,12 +374,12 @@
       <name locale="ru_RU">Заголовок под датой №2</name>
     </setting>
     <setting var="about__timeline_body_2" control_type="text">
-      <value><![CDATA[                Доработки тем дизайна и интеграция плагинов (Front-end)
+      <value>                Доработки тем дизайна и интеграция плагинов (Front-end)
                 Разработка и доработка плагинов (Back-end)
                 Настройка функционала плагинов или тем дизайна
                 Разработка ТЗ, прототипирование, дизайн
             
-            ]]></value>
+            </value>
       <name locale="ru_RU">Описание №2</name>
     </setting>
     <setting var="about__timeline_image_3" control_type="image">
@@ -381,12 +396,12 @@
       <name locale="ru_RU">Заголовок под датой №3</name>
     </setting>
     <setting var="about__timeline_body_3" control_type="text">
-      <value><![CDATA[                Доработки тем дизайна и интеграция плагинов (Front-end)
+      <value>                Доработки тем дизайна и интеграция плагинов (Front-end)
                 Разработка и доработка плагинов (Back-end)
                 Настройка функционала плагинов или тем дизайна
                 Разработка ТЗ, прототипирование, дизайн
             
-            ]]></value>
+            </value>
       <name locale="ru_RU">Описание №3</name>
     </setting>
     <setting var="about__timeline_image_4" control_type="image">
@@ -403,12 +418,12 @@
       <name locale="ru_RU">Заголовок под датой №4</name>
     </setting>
     <setting var="about__timeline_body_4" control_type="text">
-      <value><![CDATA[                Доработки тем дизайна и интеграция плагинов (Front-end)
+      <value>                Доработки тем дизайна и интеграция плагинов (Front-end)
                 Разработка и доработка плагинов (Back-end)
                 Настройка функционала плагинов или тем дизайна
                 Разработка ТЗ, прототипирование, дизайн
             
-            ]]></value>
+            </value>
       <name locale="ru_RU">Описание №4</name>
     </setting>
     <!-- team блок -->
@@ -417,6 +432,11 @@
       <name locale="ru_RU">
                 Секция: Наша команда
             </name>
+    </setting>
+    <setting control_type="checkbox" var="team_block__io">
+      <value>1</value>
+      <name locale="ru_RU">Включить отображение секции</name>
+      <description locale="ru_RU">Если выключить - вся секция целиком будет удалена из шаблона</description>
     </setting>
     <setting var="team__h1_title" control_type="text">
       <value>НАША КОМАНДА</value>
@@ -512,6 +532,11 @@
                 Секция: Наши клиенты
             </name>
     </setting>
+    <setting control_type="checkbox" var="logoclients_block__io">
+      <value>1</value>
+      <name locale="ru_RU">Включить отображение секции</name>
+      <description locale="ru_RU">Если выключить - вся секция целиком будет удалена из шаблона</description>
+    </setting>
     <setting var="main-block__values2" control_type="paragraph">
       <value/>
       <name locale="ru_RU">Рекомендуется предварительно подготовить логотипы в одинаковом размере. Напрмиер 300x100px</name>
@@ -559,21 +584,65 @@
                 Секция: Призыв к действию (форма обратной связи)
             </name>
     </setting>
+    <setting control_type="checkbox" var="offer_block__io">
+      <value>1</value>
+      <name locale="ru_RU">Включить отображение секции</name>
+      <description locale="ru_RU">Если выключить - вся секция целиком будет удалена из шаблона</description>
+    </setting>
     <setting var="offer__h1" control_type="text">
       <value>Нужен интернет-магазин, срочно</value>
       <name locale="ru_RU">Заголовок</name>
     </setting>
     <setting var="offer__p" control_type="text">
-      <value><![CDATA[Заказать разработку интернет-магазина<br>
-                на специализированной платформе Shop Script <br>
+      <value>Заказать разработку интернет-магазина&lt;br&gt;
+                на специализированной платформе Shop Script &lt;br&gt;
                 прямо сейчас в веб-студии TCSE
-            ]]></value>
+            </value>
       <name locale="ru_RU">Описание</name>
     </setting>
     <setting var="offer__phone" control_type="text">
       <value>8-800-123-45-67</value>
       <name locale="ru_RU">Телефон</name>
     </setting>
+
+    <!-- footer -->
+    <setting var="footer-block" control_type="group_divider">
+      <value>home</value>
+      <name locale="ru_RU">
+                Секция: footer (подвал сайта)
+            </name>
+    </setting>
+    <setting control_type="checkbox" var="footer2__io">
+      <value>1</value>
+      <name locale="ru_RU">Включить отображение секции</name>
+      <description locale="ru_RU">Если выключить - будет удален из шаблона</description>
+    </setting>
+    <setting var="footer__socicon_vk" control_type="text">
+      <value>#</value>
+      <name locale="ru_RU">ссылка на профиль Vk.com</name>
+      <description locale="ru_RU">Указать прямой адрес, если очистить иконка будет скрыта.</description>
+    </setting>
+    <setting var="footer__socicon_tg" control_type="text">
+      <value>#</value>
+      <name locale="ru_RU">ссылка на профиль Telegram</name>
+      <description locale="ru_RU">Указать прямой адрес, если очистить иконка будет скрыта.</description>
+    </setting>
+    <setting var="footer__socicon_instagram" control_type="text">
+      <value>#</value>
+      <name locale="ru_RU">ссылка на профиль instagram.com</name>
+      <description locale="ru_RU">Указать прямой адрес, если очистить иконка будет скрыта.</description>
+    </setting>
+    <setting var="footer__socicon_email" control_type="text">
+      <value>#</value>
+      <name locale="ru_RU">адрес email</name>
+      <description locale="ru_RU">Если очистить иконка будет скрыта.</description>
+    </setting>
+    <setting var="footer__socicon_rss" control_type="text">
+      <value>#</value>
+      <name locale="ru_RU">адрес RSS</name>
+      <description locale="ru_RU">Если очистить иконка будет скрыта.</description>
+    </setting>
+
   </settings>
   <requirements>
     <requirement property="app.installer" value="&gt;=1.13" strict="true"/>
